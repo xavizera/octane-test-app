@@ -13,5 +13,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 });
 
+Route::get('/test1', function () {
+    return response('Hello from test1 route!', 200);
+});
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
