@@ -13,8 +13,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 });
 
-Route::get('/test1', function () {
-    return response('Hello from test1 route!', 200);
+Route::get('/octane-test', function () {
+    static $counter = 0;
+    return ++$counter;
 });
 
 require __DIR__.'/settings.php';
